@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+:root {
+  --primary-accent: #34e3ff;
+  --secondary-accent: #ff8d00;
+  --primary-heading-font: 'Audiowide', cursive;
+  --primary-font: "Roboto", sans-serif;
+}

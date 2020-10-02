@@ -1,0 +1,31 @@
+h1, h2, h3, h5 {
+  font-family: var(--primary-heading-font);
+}
+
+* {
+  font-family: var(--primary-font);
+}
+
+small,
+.small {
+  display: inline-block;
+}
+
+a,
+button,
+.icon {
+  color: var(--primary-accent);
+  transition: ease color .3s;
+}
+
+a:hover,
+i:hover,
+button:hover,
+.icon:hover {
+  cursor: pointer;
+  color: var(--secondary-accent);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

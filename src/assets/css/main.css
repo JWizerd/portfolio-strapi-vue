@@ -1,0 +1,13 @@
+@import "./plugins.css";
+@import "./parts/variables.css";
+@import "./parts/typography.css";
+@import "./parts/spacing.css";
+@import "./parts/layout.css";
+@import "./parts/forms.css";
+@import "./parts/skills.css";
+@import "./parts/about.css";
+@import "./parts/banner.css";
+@import "./parts/contact.css";
+@import "./parts/resume.css";
+@import "./parts/projects.css";
+@import "./parts/media.css";

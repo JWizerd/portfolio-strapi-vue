@@ -1,0 +1,124 @@
+.resume-section {
+    background-color: #2C2D2F;
+}
+
+.resume-section ul.education,
+.resume-section ul.experience {
+    margin: 20px 0 50px;
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 50px;
+    width: 100%;
+}
+
+.resume-section ul.education li,
+.resume-section ul.experience li {
+    position: relative;
+    margin-left: 10px;
+    padding: 20px;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.resume-section ul.education li:not(:first-child),
+.resume-section ul.experience li:not(:first-child) {
+    margin-top: 60px;
+}
+
+.resume-section ul.education li span.line-left,
+.resume-section ul.experience li span.line-left {
+    width: 2px;
+    height: 100%;
+    background-color: #e1e1e1;
+    left: -10px;
+    top: 0;
+    position: absolute;
+}
+
+.resume-section ul.education li span.line-left:before,
+.resume-section ul.education li span.line-left:after,
+.resume-section ul.experience li span.line-left:before,
+.resume-section ul.experience li span.line-left:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #e1e1e1;
+    position: absolute;
+    left: -4px;
+    top: -10px;
+}
+
+.resume-section ul.education li span.line-left:after,
+.resume-section ul.experience li span.line-left:after {
+    top: 100%;
+}
+
+.resume-section .education .content,
+.resume-section .experience .content {
+    margin-left: 10px;
+}
+
+.resume-section .education .content h4,
+.resume-section .experience .content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 26px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.resume-section .education .content h5,
+.resume-section .experience .content h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.resume-section .education .content p.info,
+.resume-section .experience .content p.info {
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.resume-section .education span.year,
+.resume-section .experience span.year {
+    height: 100%;
+    left: -10px;
+    top: 0;
+    position: absolute;
+}
+
+.resume-section .education span.year span,
+.resume-section .experience span.year span {
+    font-size: 16px;
+    position: absolute;
+    -webkit-transform: translateX(-120%);
+    -ms-transform: translateX(-120%);
+    transform: translateX(-120%);
+    color: #ffffff;
+}
+
+.resume-section .education span.year span.to,
+.resume-section .experience span.year span.to {
+    top: -18px;
+}
+
+.resume-section .education span.year span.from,
+.resume-section .experience span.year span.from {
+    bottom: -18px;
+}
+
+.resume-section .skills {
+    margin-bottom: 30px;
+}
+
+.resume-section .skills .skill-item {
+    padding: 0 20px;
+}

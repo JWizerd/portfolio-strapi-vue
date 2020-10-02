@@ -1,0 +1,35 @@
+.contact-section {
+    background-color: #2C2D2F;
+}
+
+.contact-section #map {
+    width: 100%;
+    height: 200px;
+}
+
+.contact-section .contact-info {
+    text-align: center;
+}
+
+.contact-section .contact-info .info-item .icon {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-section .contact-info .info-item h5 {
+    font-size: 18px;
+}
+
+#contact-form .alert-container {
+    text-align: center;
+}
+
+#contact-form .alert-container .alert {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}

@@ -1,0 +1,95 @@
+@media screen and (max-width: 991px) {
+  .about-section .about-info {
+    margin-top: 40px;
+  }
+  .about-section .about-info ul li {
+    display: block;
+    position: relative;
+    margin: 10px 0px;
+    padding: 0 5px;
+  }
+  .blog-page .blog-heading {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .header-main {
+    border-top: 1px solid grey;
+    top: 50px;
+    width: 100%;
+    left: -100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header .header-main.mobile-friendly {
+    left: 0 !important;
+  }
+  header .header-main h2 {
+    display: none !important;
+  }
+  header .header-mobile {
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header .header-content.on .header-main {
+    left: 0px;
+  }
+  header .header-main .image-container img {
+    border-radius: 50%;
+    margin: 20px auto 30px;
+    width: 50%;
+  }
+  #main {
+    left: 0px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  #main .pt-page,
+  #main .blog-page {
+    padding-top: 50px;
+  }
+  .banner-section .banner-content h1 {
+    font-size: 50px;
+  }
+  .banner-section .banner-content p.cd-headline {
+    font-size: 22px;
+  }
+
+  .portfolio-section .portfolio-filter ul li {
+    font-size: 12px;
+    padding: 15px 8px;
+  }
+}
+
+@media screen and (min-height: 610px) {
+  .header-main .nav-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .about-section .about .signature {
+    width: 70%;
+  }
+  .resume-section ul.education,
+  .resume-section ul.experience {
+    padding: 0;
+  }
+  .resume-section ul.education span.year,
+  .resume-section ul.experience span.year {
+    left: 42px;
+  }
+  .resume-section .skills .skill-item {
+    padding: 0;
+  }
+  .portfolio-section .portfolio-filter ul {
+    border: none;
+  }
+}

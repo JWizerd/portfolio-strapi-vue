@@ -1,0 +1,96 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #2C2D2F;
+  z-index: 10000;
+}
+
+.preloader .loader {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.preloader .loader h4 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: heading-color;
+}
+
+.loader span {
+  width: .6em;
+  height: .6em;
+  margin: .19em;
+  background: #007DB6;
+  -webkit-border-radius: .6em;
+  border-radius: .6em;
+  -webkit-animation: loading 1s infinite alternate;
+  animation: loading 1s infinite alternate;
+}
+
+.loader span:nth-of-type(2) {
+  background: #008FB2;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-of-type(3) {
+  background: #009B9E;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.loader span:nth-of-type(4) {
+  background: #00A77D;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.loader span:nth-of-type(5) {
+  background: #00B247;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.loader span:nth-of-type(6) {
+  background: #5AB027;
+  -webkit-animation-delay: 1.0s;
+  animation-delay: 1.0s;
+}
+
+.loader span:nth-of-type(7) {
+  background: #A0B61E;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+/*
+ * Animation keyframes
+ * Use transition opacity instead of keyframes?
+ */
+
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
