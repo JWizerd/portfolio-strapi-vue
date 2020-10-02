@@ -12,7 +12,7 @@
               :class="filter === activeFilter ? 'active' : null"
               @click="() => filterProjects(filter)"
             >
-              {{ filter }}
+              {{ pluralized(filter) }}
             </li>
           </ul>
         </div>
@@ -54,6 +54,10 @@ export default {
   methods: {
     filterProjects(type) {
       this.activeFilter = type;
+    },
+    pluralized(filter) {
+      if (filter === "all") return filter;
+      return `${filter}s`;
     }
   }
 };
