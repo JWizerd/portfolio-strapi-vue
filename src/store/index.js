@@ -36,8 +36,8 @@ export default new Vuex.Store({
     TOGGLE_LOADING(state, bool) {
       state.pageLoading = bool;
     },
-    TOGGLE_MENU(state) {
-      state.menu = !state.menu;
+    TOGGLE_MENU(state, bool) {
+      state.menu = bool || !state.menu;
     }
   },
   actions: {

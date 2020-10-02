@@ -46,13 +46,4 @@ const router = new VueRouter({
   routes
 });
 
-router.afterEach(() => {
-  const header = document.querySelector(".header-main");
-  if (header !== null) {
-    header.classList.remove("mobile-friendly");
-    document.querySelector(".header-toggle i").classList.remove("fa-times");
-    document.querySelector(".header-toggle i").classList.add("fa-bars");
-  }
-});
-
 export default router;

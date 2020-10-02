@@ -11,7 +11,7 @@
           <div class="row">
             <div class="col-md-8 mb-0">
               <img
-                :src="project.image.formats.medium.url"
+                :src="project.image.url"
                 :alt="project.image.alt"
                 class="featured-img"
               />
@@ -27,7 +27,7 @@
               </div>
             </div>
           </div>
-          <div class="row mb-40">
+          <div class="row mb-40 mt-40">
             <div class="col-md-12">
               <div class="subheading mb-0 text-left">
                 <h3>Applied Skills</h3>

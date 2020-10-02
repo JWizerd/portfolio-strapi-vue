@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav-menu">
+  <nav class="nav-menu" @click="closeMenu">
     <ul>
       <li
         class="pt-link active"
@@ -41,6 +41,11 @@ export default {
         "/contact": "lnr lnr-envelope",
         "/resume": "lnr lnr-chart-bars"
       };
+    }
+  },
+  methods: {
+    closeMenu() {
+      this.$store.commit("TOGGLE_MENU", false);
     }
   }
 };
