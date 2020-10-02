@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       index: 0,
-      fact: "Full-Stack Software Developer"
+      fact: null
     };
   },
   methods: {
