@@ -26,18 +26,24 @@ export default {
   methods: {
     setIndex() {
       if (this.index === this.$store.getters.facts.length - 1) {
-        this.index = 0;
+        this.index = 1;
       } else {
         this.index = this.index + 1;
       }
     },
     setFact() {
-      this.fact = this.$store.getters.facts[this.index].text;
       this.setIndex();
+      this.fact = this.$store.getters.facts[this.index].text;
     }
   },
   mounted() {
-    setInterval(this.setFact.bind(this), 4000);
+    if (this.$store.getters.facts) {
+      this.fact =
+        this.$store.getters.facts &&
+        this.$store.getters.facts[0] &&
+        this.$store.getters.facts[0].text;
+      setInterval(this.setFact.bind(this), 4000);
+    }
   }
 };
 </script>
