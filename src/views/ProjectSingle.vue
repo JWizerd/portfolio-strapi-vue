@@ -9,14 +9,14 @@
       <div class="single-work">
         <div class="container">
           <div class="row">
-            <div class="col-md-8 mb-0">
+            <div class="col-md-12 mb-0">
               <img
                 :src="project.image.url"
                 :alt="project.image.alt"
                 class="featured-img"
               />
             </div>
-            <div class="col-md-4">
+            <div class="col-md-12">
               <div class="subheading mb-0 text-left"></div>
               <p>{{ project.description }}</p>
               <hr />
