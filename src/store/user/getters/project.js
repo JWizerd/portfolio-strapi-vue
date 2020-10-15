@@ -13,6 +13,9 @@ export const PROJECT_GETTERS = {
   testimonials(state) {
     return state.projects.map(p => p.testimonials).flat();
   },
+  featuredTestimonials(_, getters) {
+    return getters.testimonials.filter(t => t.featured);
+  },
   filterProjects: (_, getters) => type => {
     let projects = getters.projects;
     if (type && projects && type !== FILTER_ALL) {

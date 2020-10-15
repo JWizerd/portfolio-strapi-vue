@@ -18,7 +18,10 @@
 
       <TopSkills />
 
-      <Testimonials :testimonials="latestTestimonials" />
+      <Testimonials
+        :testimonials="$store.getters.featuredTestimonials"
+        v-if="$store.getters.testimonials"
+      />
     </div>
   </section>
 </template>
@@ -42,9 +45,6 @@ export default {
         text: "Download Resume",
         link: this.$store.getters.resume.url
       };
-    },
-    latestTestimonials() {
-      return this.$store.getters.testimonials.slice(0, 3);
     },
     details() {
       return [
