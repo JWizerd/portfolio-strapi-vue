@@ -8,7 +8,9 @@
         <img :src="testimonial.headshot.url" :alt="testimonial.headshot.alt" />
         <div class="meta-info">
           <h4>{{ testimonial.name }}</h4>
-          <p>{{ testimonial.relation }}</p>
+          <p class="mb-0">
+            {{ testimonial.affiliation }} - {{ testimonial.role }}
+          </p>
         </div>
       </div>
     </div>
