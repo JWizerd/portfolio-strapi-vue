@@ -6,6 +6,6 @@ export const USER_MUTATIONS = {
   },
   SET_USER(state, auth) {
     state.user = auth.user;
-    state.skillFilters = getParameterByName("skills");
+    state.skillFilters = getParameterByName("skill");
   }
 };

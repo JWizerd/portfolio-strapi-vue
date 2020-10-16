@@ -1,4 +1,4 @@
-import { sortBySkills, TYPES } from "@/utils";
+import { filterBySkills, TYPES } from "@/utils";
 const FILTER_ALL = "all";
 
 export const PROJECT_GETTERS = {
@@ -27,9 +27,9 @@ export const PROJECT_GETTERS = {
   clients(state, getters) {
     const filterByClientType = p => p.type === TYPES.client;
     const projects = state.user.projects.filter(filterByClientType);
-    return sortBySkills(getters.skillFilters, projects);
+    return filterBySkills(getters.skillFilters, projects);
   },
   projects(state, getters) {
-    return sortBySkills(getters.skillFilters, state.projects);
+    return filterBySkills(getters.skillFilters, state.projects);
   }
 };

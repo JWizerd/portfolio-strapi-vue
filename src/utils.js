@@ -2,10 +2,11 @@ export const TYPES = {
   education: "education",
   all: "all",
   work: "work",
-  client: "client"
+  client: "client",
+  skill: "skill"
 };
 
-export const sortBySkills = (skills, list) => {
+export const filterBySkills = (skills, list) => {
   if (
     Array.isArray(list) &&
     Array.isArray(skills) &&
@@ -30,19 +31,20 @@ export const sortBySkills = (skills, list) => {
   return list;
 };
 
-export const sortBySkill = (skill, list) => {
+export const filterBySkill = list => {
+  const skillFilter = getParameterByName(TYPES.skill);
+
   if (
     Array.isArray(list) &&
-    !Array.isArray(skill) &&
+    skillFilter &&
     typeof list[0] !== "object" &&
     list[0].skill
   ) {
     const tagged = [];
-    const skillToFilter = skill.id;
-
+    debugger;
     for (const item of list) {
       for (const skill of item.skills) {
-        if (skill.id === skillToFilter) {
+        if (skill.name.toLowerCase() === skillFilter.toLowerCase()) {
           tagged.push(item);
         }
       }
@@ -59,8 +61,8 @@ export const getParameterByName = (name, url) => {
     url = window.location.href;
   }
   name = name.replace(/[[\]]/g, "\\$&");
-  const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-    results = regex.exec(url);
+  const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+  const results = regex.exec(url);
   if (!results) return null;
   if (!results[2]) return "";
   const param = decodeURIComponent(results[2].replace(/\+/g, " "));

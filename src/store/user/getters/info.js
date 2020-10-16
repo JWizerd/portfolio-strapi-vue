@@ -1,4 +1,4 @@
-import { sortBySkills, TYPES } from "@/utils";
+import { filterBySkills, TYPES } from "@/utils";
 
 export const INFO_GETTERS = {
   name(state) {
@@ -11,17 +11,17 @@ export const INFO_GETTERS = {
     return state.user;
   },
   facts(state) {
-    return sortBySkills(state.tags, state.user.facts);
+    return filterBySkills(state.tags, state.user.facts);
   },
   pertinentDescription(state, getters) {
     if (state.user.resume[0].biographies.length === 1) {
       return state.user.biographies[0].text;
     }
 
-    return sortBySkills(getters.skillFilters, state.user.biographies)[0];
+    return filterBySkills(getters.skillFilters, state.user.biographies)[0];
   },
   services(state, getters) {
-    return sortBySkills(getters.skillFilters, state.user.skills).filter(
+    return filterBySkills(getters.skillFilters, state.user.skills).filter(
       s => s.featured
     );
   },
@@ -34,11 +34,11 @@ export const INFO_GETTERS = {
   education(state, getters) {
     const filterByEducation = e => e.type === TYPES.education;
     const eduExperiences = state.user.experiences.filter(filterByEducation);
-    return sortBySkills(getters.skillFilters, eduExperiences);
+    return filterBySkills(getters.skillFilters, eduExperiences);
   },
   experience(state, getters) {
     const filterByWork = e => e.type === TYPES.work;
     const workExperiences = state.user.experiences.filter(filterByWork);
-    return sortBySkills(getters.skillFilters, workExperiences);
+    return filterBySkills(getters.skillFilters, workExperiences);
   }
 };
