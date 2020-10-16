@@ -95,7 +95,10 @@ export default {
       ];
     },
     project() {
-      return this.$store.getters.projects[this.$route.params.id];
+      const projectId = this.$route.params.id;
+      return this.$store.getters.projects.find(
+        p => p.id === parseInt(projectId, 10)
+      );
     }
   },
   mounted() {
