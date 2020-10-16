@@ -20,9 +20,8 @@
 
       <div class="row portfolio-items mb-50">
         <ProjectCard
-          v-for="(project, index) in filteredProjects"
-          :key="index"
-          :index="index"
+          v-for="project in filteredProjects"
+          :key="project.id"
           :project="project"
         />
       </div>

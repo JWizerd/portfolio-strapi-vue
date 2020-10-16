@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     goToProject() {
-      this.$router.push(`/projects/${this.index}`);
+      this.$router.push(`/projects/${this.project.id}`);
     }
   }
 };
