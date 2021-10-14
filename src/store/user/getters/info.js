@@ -1,4 +1,4 @@
-import { sortBySkills, TYPES } from "@/utils";
+import { sortBySkills, sortByDate, TYPES } from "@/utils";
 
 export const INFO_GETTERS = {
   name(state) {
@@ -34,11 +34,11 @@ export const INFO_GETTERS = {
   education(state, getters) {
     const filterByEducation = e => e.type === TYPES.education;
     const eduExperiences = state.user.experiences.filter(filterByEducation);
-    return sortBySkills(getters.skillFilters, eduExperiences);
+    return sortByDate(sortBySkills(getters.skillFilters, eduExperiences));
   },
   experience(state, getters) {
     const filterByWork = e => e.type === TYPES.work;
     const workExperiences = state.user.experiences.filter(filterByWork);
-    return sortBySkills(getters.skillFilters, workExperiences);
+    return sortByDate(sortBySkills(getters.skillFilters, workExperiences));
   }
 };

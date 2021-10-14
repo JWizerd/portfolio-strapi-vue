@@ -66,3 +66,7 @@ export const getParameterByName = (name, url) => {
   const param = decodeURIComponent(results[2].replace(/\+/g, " "));
   return param && param.includes(",") ? param.trim().split(",") : [param];
 };
+
+export const sortByDate = experiences => {
+  return experiences.sort((a, b) => b.to - a.to);
+};
