@@ -1,3 +1,4 @@
-[submodule "src/services/strapi--javascript-sdk"]
-	path = src/services/strapi--javascript-sdk
-	url = git@github.com:autom8-apps/strapi--javascript-sdk.git
+
+[submodule "src/services/strapi"]
+	path = src/services/strapi
+	url = git@github.com:JWizerd/strapi--javascript-sdk.git
