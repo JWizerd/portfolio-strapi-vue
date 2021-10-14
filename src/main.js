@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./registerServiceWorker";
-import Strapi from "./services/strapi/build/main";
+import Strapi from "@autom8apps/strapi-sdk-javascript";
 import Pixabay from "@/services/pixabay";
 
 Vue.config.productionTip = false;
