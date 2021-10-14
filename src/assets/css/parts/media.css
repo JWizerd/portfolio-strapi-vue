@@ -26,9 +26,6 @@
   header .header-main.mobile-friendly {
     left: 0 !important;
   }
-  header .header-main h2 {
-    display: none !important;
-  }
   header .header-mobile {
     display: block;
     -webkit-transition: all 0.3s ease-in-out;
@@ -37,11 +34,6 @@
   }
   header .header-content.on .header-main {
     left: 0px;
-  }
-  header .header-main .image-container img {
-    border-radius: 50%;
-    margin: 20px auto 30px;
-    width: 50%;
   }
   #main {
     left: 0px;
