@@ -16,7 +16,7 @@ export const USER_ACTIONS = {
       dispatch("GET_BACKGROUND", auth.user);
       commit("TOGGLE_LOADING", false);
     } catch (error) {
-      console.error("FAILURE in INIT ACTION", error);
+      console.error("FAILURE in INIT ACTION", error.message);
     }
   },
   async GET_BACKGROUND({ commit }, user) {
