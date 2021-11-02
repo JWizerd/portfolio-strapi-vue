@@ -2,7 +2,7 @@
   <section
     id="home"
     class="banner-section pt-page"
-    :style="{ backgroundImage: 'url(' + $store.getters.background + ')' }"
+    style="background-image: url(./bg-tech.svg)"
   >
     <div class="banner-content">
       <h1 class="mb-20">{{ $store.getters.name }}</h1>

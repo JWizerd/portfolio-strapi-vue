@@ -13,7 +13,6 @@ export const USER_ACTIONS = {
 
       commit("SET_USER", auth);
       dispatch("GET_PROJECTS", auth.user);
-      dispatch("GET_BACKGROUND", auth.user);
       commit("TOGGLE_LOADING", false);
     } catch (error) {
       console.error("FAILURE in INIT ACTION", error.message);
