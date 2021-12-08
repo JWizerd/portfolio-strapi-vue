@@ -24,6 +24,11 @@
                 <a class="btn-main" :href="project.website" target="_blank">
                   Visit Website
                 </a>
+                <template v-for="link in project.additionalLinks">
+                  <a :href="link.link" class="btn-main ml-2" :key="link.link">
+                    {{ link.title }}
+                  </a>
+                </template>
               </div>
             </div>
           </div>
